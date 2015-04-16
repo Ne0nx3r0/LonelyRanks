@@ -1,0 +1,68 @@
+# Cost of changing name color
+namecolor_change_cost: 5
+
+# Cost of changinmg nmickname
+nickname_change_cost: 5
+
+# Colors that cannot be used for namecolors or nicknames
+banned_colors:
+   - MAGIC
+   - STRIKETHROUGH
+   - ITALIC
+   - UNDERLINE
+   - BOLD
+   
+# List of player ranks
+player_ranks:
+    newbie:
+        color: WHITE
+    citizen:
+        color: YELLOW
+    regular:
+        color: DARK_AQUA
+    veteran:
+        color: DARK_GRAY
+    flower:
+        color: DARK_PURPLE
+    whovian:
+        color: DARK_BLUE
+    vip:
+        color: GOLD
+    platinum:
+        color: GRAY
+    moderator:
+        color: DARK_GREEN
+        staffRank: true
+        prefix: Mod
+    admin:
+        color: DARK_RED
+        staffRank: true
+        prefix: Admin   
+
+# list of colors that can be used in chat
+chat_colors:
+    "&black": "§0"
+    "&dark_blue": "§1"
+    "&dark_green": "§2"
+    "&dark_aqua": "§3"
+    "&dark_red": "§4"
+    "&dark_purple": "§5"
+    "&gold": "§6"
+    "&gray": "§7"
+    "&dark_gray": "§8"
+    "&blue": "§9"
+    "&green": "§a"
+    "&aqua": "§b"
+    "&red": "§c"
+    "&light_purple": "§d"
+    "&yellow": "§e"
+    "&white": "§f"
+    "&magic": "§k"
+    "&bold": "§l"
+    "&b": "§l"
+    "&strikethrough": "§m"
+    "&st": "§m"
+    "&underline": "§n"
+    "&u": "§n"
+    "&italic": "§o"
+    "&reset": "§r"

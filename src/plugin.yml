@@ -1,0 +1,77 @@
+name: LonelyRanks
+main: com.ne0nx3r0.lonely.ranks.LonelyRanksPlugin
+version: '1.5.14'
+database: false
+description: Lonely Ranks Manager
+commands:
+    money:
+      description: Lonely economy commands
+depend: [CoolPoints,Vault,LonelyBadges]
+softdepend: [TagAPI]
+commands:
+   rank:
+      description: See of set a player rank
+   mc:
+      description: Say something in ModChat
+   namecolor:
+      description: Pick a custom name color
+   nickname:
+      description: Pick a custom name color
+   commandspy:
+      description: Show commands players type
+   namespy:
+      description: Show real names of players
+   buymotd:
+      description: View or buy the message of the day
+   list:
+      description: Show list of players
+      aliases: who
+permissions:
+  lonely.ranks.mc:
+    description: Can see moderator chat
+    default: false
+  lonely.ranks.player:
+    description: Can rank players to non-staff ranks
+    default: false
+  lonely.ranks.admin:
+    description: Can rank players to moderator and admin
+    default: false
+  lonely.ranks.namecolor:
+    description: Can set their own namecolor
+    default: false
+  lonely.ranks.namecolor.others:
+    description: Can set the namecolor of others
+    default: false
+  lonely.ranks.nickname:
+    description: Can set their own nickname
+    default: false
+  lonely.ranks.nickname.others:
+    description: Can set the nickname of others
+    default: false
+  lonely.ranks.tag:
+    description: Can set their own tag
+    default: false
+  lonely.ranks.tag.others:
+    description: Can set the tag of others
+    default: false
+  lonely.ranks.hideJoinQuit:
+    description: Do not show join and quit messages
+    default: false
+  lonely.ranks.namespy:
+    description: allows enabling/disabling command nicknames
+    default: false
+  lonely.ranks.namespy.spying:
+    description: allows/disable showing nicknames
+    default: false
+  lonely.commands.commandspy:
+    description: allows enabling/disabling command messages
+    default: false
+  lonely.commands.commandspy.spying:
+    description: allows/disable showing command messages
+    default: false
+  lonely.commands.commandspy.ninja:
+    description: Hides commands even from those with spying
+    default: false
+  lonely.ranks.chatColor:
+    description: Allows a player to use colors in chat
+    default: false
