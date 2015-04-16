@@ -9,6 +9,8 @@ commands:
 depend: [CoolPoints,Vault,LonelyBadges]
 softdepend: [TagAPI]
 commands:
+   rename:
+      description: Rename an item
    rank:
       description: See of set a player rank
    mc:
