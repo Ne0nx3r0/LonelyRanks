@@ -1,6 +1,7 @@
 package com.ne0nx3r0.lonely.ranks.commands;
 
 import com.ne0nx3r0.lonely.ranks.LonelyRanksPlugin;
+import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.EconomyResponse;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -27,8 +28,7 @@ public class Rename extends LonelyCommand implements CommandExecutor {
         }
 
         if(args.length == 0){
-            cs.sendMessage(ChatColor.GRAY+"Usage: "+ChatColor.RESET+"/rename New Item Name");
-            cs.sendMessage(ChatColor.RED+"You must be holding an item");
+            cs.sendMessage(ChatColor.GRAY+"Usage: "+ChatColor.RESET+"/rename New Item Name"+ChatColor.RED+" (must be holding an item)");
 
             java.util.List<ChatColor> allowedColors = this.plugin.nicknameManager.getAllowedColors();
 
@@ -84,13 +84,17 @@ public class Rename extends LonelyCommand implements CommandExecutor {
 
         String sNewItemName = newItemName.substring(1);
 
+        for(ChatColor cc : ChatColor.values()){
+            sNewItemName.replace("&"+cc.getChar(),cc.toString());
+        }
+
         ItemMeta meta = isHand.getItemMeta();
 
         meta.setDisplayName(sNewItemName);
 
         isHand.setItemMeta(meta);
 
-        cs.sendMessage("Set "+isHand.getType()+"'s name to: "+sNewItemName);
+        cs.sendMessage("Paid "+plugin.economy.format(cost)+" to set "+isHand.getType()+"'s name to: "+sNewItemName);
 
         return true;
     }
