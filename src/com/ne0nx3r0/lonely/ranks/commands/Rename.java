@@ -27,11 +27,8 @@ public class Rename extends LonelyCommand implements CommandExecutor {
         }
 
         if(args.length == 0){
-            cs.sendMessage("");
             cs.sendMessage(ChatColor.GRAY+"Usage: "+ChatColor.RESET+"/rename New Item Name");
-            cs.sendMessage("");
             cs.sendMessage(ChatColor.RED+"You must be holding an item");
-            cs.sendMessage("");
 
             java.util.List<ChatColor> allowedColors = this.plugin.nicknameManager.getAllowedColors();
 
