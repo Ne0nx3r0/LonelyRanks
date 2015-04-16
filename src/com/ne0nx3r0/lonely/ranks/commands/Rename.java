@@ -22,6 +22,10 @@ public class Rename extends LonelyCommand implements CommandExecutor {
     }
 
     public boolean onCommand(CommandSender cs, Command cmnd, String label, String[] args) {
+        if (!hasCommandPermission(cs, "lonely.ranks.rename", "rename items")) {
+            return true;
+        }
+
         if(args.length == 0){
             cs.sendMessage("");
             cs.sendMessage(ChatColor.GRAY+"Usage: "+ChatColor.RESET+"/rename New Item Name");
